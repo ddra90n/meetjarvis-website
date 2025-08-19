@@ -16,10 +16,30 @@ import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 
+// metadata for seo
 export const metadata = {
+  title: 'Jarvis Marketing – Local SEO tool & Google Business Profile optimization',
   description:
-    'Jarvis Marketing helps local businesses win more customers by ranking higher on Google.',
+    'AI-powered local SEO software and services. Google Business Profile management, reviews, posts, and rankings. For dentists, HVAC, roofers, spas, and landscapers.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.meetjarvis.co/',
+    siteName: 'Jarvis Marketing',
+    title: 'Jarvis Marketing – Local SEO tool & Google Business Profile optimization',
+    description:
+      'AI-powered local SEO software and services. Google Business Profile management, reviews, posts, and rankings.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jarvis Marketing – Local SEO tool & Google Business Profile optimization',
+    description:
+      'AI-powered local SEO software and services. Google Business Profile management, reviews, posts, and rankings.',
+    images: ['/og-image.png'],
+  },
 }
+
 
 function Hero() {
   return (
@@ -34,12 +54,17 @@ function Hero() {
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
             Get more customers by showing up first on Google.
           </p>
+
+
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="#expertise">How it works</Button>
             <Button variant="secondary" href="/case-studies">
   Proof it works
 </Button>
           </div>
+<p className="mt-4 max-w-2xl text-base text-gray-700">
+  Trusted by <strong>spas</strong>, <strong>dentists</strong>, <strong>roofers</strong>, <strong>electricians</strong>, and many more local service businesses.
+</p>
         </div>
       </Container>
     </div>
@@ -57,6 +82,7 @@ function FeatureSection() {
           width={1216}
           height={688}
           src="/screenshots/app.png"
+          alt="Local SEO software dashboard for Google Business Profile optimization"
           className="mt-16 h-144 sm:h-auto sm:w-304"
         />
       </Container>
@@ -100,8 +126,14 @@ function BentoSection() {
   title="See quick wins"
   description="On average, our clients see 150% more clicks to their Google profile in just 3 months."
   graphic={
-    <div className="absolute inset-0 bg-[url(/screenshots/quick-wins.png)] bg-top bg-contain bg-no-repeat" />
-  }
+  <div className="absolute inset-0 bg-[url(/screenshots/quick-wins.png)] bg-top bg-contain bg-no-repeat">
+    <img
+      src="/screenshots/quick-wins.png"
+      alt="Google Business Profile optimization results – 150% click growth"
+      className="sr-only"
+    />
+  </div>
+}
   className="lg:col-span-2 lg:rounded-bl-4xl"
 />
        <BentoCard
@@ -109,8 +141,14 @@ function BentoSection() {
   title="Build a trusted brand"
   description="Ranking at the top makes your brand the go-to choice in your local area."
   graphic={
-    <div className="absolute inset-0 bg-[url(/screenshots/reputation.png)] bg-center bg-contain bg-no-repeat" />
-  }
+  <div className="absolute inset-0 bg-[url(/screenshots/reputation.png)] bg-center bg-contain bg-no-repeat">
+    <img
+      src="/screenshots/reputation.png"
+      alt="Local SEO software reputation dashboard – build a trusted brand"
+      className="sr-only"
+    />
+  </div>
+}
   className="lg:col-span-2"
 />
         <BentoCard
@@ -118,8 +156,14 @@ function BentoSection() {
   title="Steady flow of customers"
   description="Ads stop when you stop paying. High Google rankings keep the leads coming — and your calendar full."
   graphic={
-    <div className="absolute inset-0 bg-[url(/screenshots/consistency.png)] bg-center bg-contain bg-no-repeat" />
-  }
+  <div className="absolute inset-0 bg-[url(/screenshots/consistency.png)] bg-center bg-contain bg-no-repeat">
+    <img
+      src="/screenshots/consistency.png"
+      alt="Google Maps ranking tool – steady flow of customers"
+      className="sr-only"
+    />
+  </div>
+}
   className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
 />
 
@@ -144,7 +188,13 @@ function DarkBentoSection() {
             title="Our experts research your competitors"
             description="We uncover what your local competitors rank for—the services, categories, and keywords driving their traffic—and find the best 10 keywords for your business to rank for."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/networking.png)] bg-size-[851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/local-seo-competitive-research.png)] bg-size-[851px_344px] bg-no-repeat">
+              <img
+                src="/screenshots/local-seo-competitive-research.png"
+                alt="Local SEO competitor research dashboard – keywords and categories analysis"
+                className="sr-only"
+              />
+            </div>
             }
             fade={['top']}
             className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
@@ -166,7 +216,7 @@ function DarkBentoSection() {
   graphic={
     <img
       src="/screenshots/reviews.png"
-      alt="5-star reviews QR demo"
+      alt="Review management software demo – QR code for 5-star Google reviews"
       className="w-full h-auto rounded-xl"
     />
   }
@@ -179,7 +229,13 @@ function DarkBentoSection() {
             title="Work we do every week"
             description="Every week, we create fresh Google posts, videos, Q&As, and review replies—then push that content (and images) to directories like Yelp and Yellow Pages, so you rank higher not just on Google, but everywhere customers are searching."
             graphic={
-              <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-size-[851px_344px] bg-no-repeat" />
+              <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-size-[851px_344px] bg-no-repeat">
+              <img
+                src="/screenshots/engagement.png"
+                alt="Google Business Profile posts and engagement example"
+                className="sr-only"
+              />
+            </div>
             }
             fade={['top']}
             className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
@@ -205,6 +261,59 @@ export default function Home() {
         <DarkBentoSection />
       </main>
       <Testimonials />
+
+{/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does Jarvis Marketing do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Jarvis Marketing is an AI-powered local SEO tool and service that optimizes Google Business Profile, manages reviews and posts, and improves Google Maps rankings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer Google Business Profile management?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We provide end-to-end Google Business Profile management and optimization, including categories, descriptions, services, posts, Q&A, and review replies."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is Jarvis Marketing for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We help local service businesses such as dentists, HVAC companies, roofers, spas, and landscapers rank higher and win more customers."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+{/* Organization Schema */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Jarvis Marketing",
+      "url": "https://www.meetjarvis.co/",
+      "logo": "https://www.meetjarvis.co/og-image.png",
+      "description": "AI-powered local SEO software and services for Google Business Profile management and Google Maps rankings."
+    })
+  }}
+/>
+
       <Footer />
     </div>
   )

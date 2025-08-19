@@ -5,14 +5,29 @@ import { revalidateSyncTags } from '@/sanity/revalidateSyncTags'
 import '@/styles/tailwind.css'
 
 export const metadata = {
-  title: {
-    template: '%s - Jarvis',                 // ← was Radiant
-    default: 'Jarvis – Win local search',    // your default tab title
-  },
-  // (optional) also set a default description:
+  metadataBase: new URL('https://www.meetjarvis.co'),
+  title: { template: '%s – Jarvis', default: 'Jarvis – Win local search' },
   description:
-    'Get more customers by showing up first on Google with Jarvis Marketing.',
-}
+    'Jarvis Marketing helps local businesses win more customers by ranking higher on Google and boosting reviews.',
+  openGraph: {
+    type: 'website',
+    url: 'https://www.meetjarvis.co',
+    siteName: 'Jarvis Marketing',
+    title: 'Jarvis – Win local search',
+    description:
+      'Jarvis Marketing helps local businesses win more customers by ranking higher on Google and boosting reviews.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jarvis – Win local search',
+    description:
+      'Jarvis Marketing helps local businesses win more customers by ranking higher on Google and boosting reviews.',
+    images: ['/og-image.png'],
+  },
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
+};
 
 export default function RootLayout({ children }) {
   return (

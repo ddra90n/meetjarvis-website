@@ -9,6 +9,7 @@ import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 import clsx from 'clsx'
 
+
 // Your data (unchanged)
 const CASE_STUDIES = [
   {
@@ -189,6 +190,7 @@ export default function CaseStudiesPage() {
       <GradientBackground />
       <Container>
         <Navbar />
+
         <Subheading className="mt-16">Case studies</Subheading>
         <Heading as="h1" className="mt-2 max-w-4xl">
           Real before &amp; after results.
