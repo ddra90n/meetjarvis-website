@@ -1,16 +1,14 @@
-'use client'
-
-import { visionTool } from '@sanity/vision'
-import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
-import { apiVersion, dataset, projectId } from './src/sanity/env'
-import { schema } from './src/sanity/schema'
+// sanity.config.js
+import {defineConfig} from 'sanity'
+import {deskTool} from 'sanity/desk'
+import {visionTool} from '@sanity/vision'
+import {schema as existingSchema} from './src/sanity/schema' // 👈 note the path + named import
 
 export default defineConfig({
-  name: 'Radiant',
-  basePath: '/studio',
-  projectId,
-  dataset,
-  schema,
-  plugins: [structureTool(), visionTool({ defaultApiVersion: apiVersion })],
+  name: 'default',
+  title: 'Jarvis Marketing Blog',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  plugins: [deskTool(), visionTool()],
+  schema: existingSchema,
 })
