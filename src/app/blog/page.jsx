@@ -155,7 +155,7 @@ async function Posts({ page, category }) {
   }
 
   if (posts.length === 0) {
-    return <p className="mt-6 text-gray-500">No posts found.</p>
+    return <p className="mt-6 text-gray-500">Coming soon.</p>
   }
 
   return (
@@ -279,11 +279,10 @@ export default async function Blog({ searchParams }) {
         <Navbar />
         <Subheading className="mt-16">Blog</Subheading>
         <Heading as="h1" className="mt-2">
-          What’s happening at Radiant.
+          Local SEO Guides
         </Heading>
         <Lead className="mt-6 max-w-3xl">
-          Stay informed with product updates, company news, and insights on how
-          to sell smarter at your company.
+          Practical tips, insights, and strategies from Jarvis Marketing to help your business rank higher on Google and win more local customers.
         </Lead>
       </Container>
       {page === 1 && !category && <FeaturedPosts />}
