@@ -1,8 +1,7 @@
-// sanity.config.js
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schema as existingSchema} from './src/sanity/schema' // 👈 note the path + named import
+import {schema as existingSchema} from './src/sanity/schema' // <- if your aggregator is here
 
 export default defineConfig({
   name: 'default',
@@ -12,3 +11,4 @@ export default defineConfig({
   plugins: [deskTool(), visionTool()],
   schema: existingSchema,
 })
+
