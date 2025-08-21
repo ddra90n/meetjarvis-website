@@ -13,9 +13,9 @@ import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
 const links = [
   //{ href: '/pricing', label: 'Pricing' },
-  { href: '/case-studies', label: 'Case Studies' },
   { href: '/blog', label: 'Blog' },
-  { href: 'https://app.meetjarvis.co/client-login', label: 'Login' },
+  { href: '/guides', label: 'Guides' },
+  { href: 'https://app.meetjarvis.co/client-login', label: 'Client Login', ariaLabel: 'Client Login' },
 ]
 
 function DesktopNav() {
