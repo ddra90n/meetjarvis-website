@@ -44,8 +44,10 @@ export default function RootLayout({ children }) {
     href="/blog/feed.xml"
   />
   <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/logo-square.png" type="image/png" />
+<link rel="apple-touch-icon" href="/logo-square.png" />
+
 </head>
       <body className="text-gray-950 antialiased">
         {children}
